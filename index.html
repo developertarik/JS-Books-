@@ -5,10 +5,12 @@
     <title></title>
     <!--script-->
     <script src="script.js" defer></script>
+    <!--add css-->
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
    <h1>1000 Books</h1>
-    <button>ADD BOOKS</button>
+    <button id="button">ADD BOOKS</button>
    <table class="analog" id="analog">
       <tr>
         <th>
@@ -17,4 +19,17 @@
        
       </tr>
     </table>
+    <form action="">
+      <fieldset>Author:</fieldset>
+      <input type="text" >
+
+      <fieldset>Title:</fieldset>
+      <input type="text">
+
+      <fieldset>Pages:</fieldset>
+      <input type="text">
+
+      <fieldset>Read?</fieldset>
+      <input type="checkbox" name="read" id="read">
+    </form>
    </html>

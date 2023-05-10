@@ -1,1 +1,14 @@
- 
+ body{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+ .analog{
+    border :1px solid;
+ }
+ form{
+   width: 250px;
+   height: 125px;
+    visibility: hidden;
+ }
