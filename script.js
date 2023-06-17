@@ -23,7 +23,19 @@ const table = document.getElementById("table")
 
 // }
 //add to library
+button.addEventListener("click",()=>{
+  form.style.visibility = "visible";
+})
+
 function addToLibrary(){
+ 
+  
+
+    
+}
+const form  = document.getElementById("form")
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
   author = document.getElementById("author").value
   title  = document.getElementById("title").value
   pages = document.getElementById("pages").value
@@ -31,17 +43,10 @@ function addToLibrary(){
   alert(author)
   alert(title)
   alert(pages)
-  alert(read)
+  alert(read) 
+  form.style.visibility = "hidden";
 
-    
-}
-
-submit.addEventListener("click",(event)=>{
-  console.log(author.value)
-  console.log(title.value)
-  console.log(pages.value)
-  console.log(read.value)
-  event.preventDefault();}) 
+ }); 
 
   
 
