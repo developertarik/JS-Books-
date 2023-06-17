@@ -9,7 +9,6 @@ let bookArray =["hobbit 399 read","silmarillion 299 read","create 0 0 read"];
   }
 
   
- Book();
 //buttons
 const button = document.getElementById("button")
 const submit = document.getElementById("submit")
@@ -29,11 +28,20 @@ function addToLibrary(){
   title  = document.getElementById("title").value
   pages = document.getElementById("pages").value
   read = document.getElementById("read").value
-  console.log(author,title,pages,read)
+  alert(author)
+  alert(title)
+  alert(pages)
+  alert(read)
+
+    
 }
 
-addToLibrary()
- 
+submit.addEventListener("click",(event)=>{
+  console.log(author.value)
+  console.log(title.value)
+  console.log(pages.value)
+  console.log(read.value)
+  event.preventDefault();}) 
 
   
 
