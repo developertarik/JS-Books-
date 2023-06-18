@@ -28,7 +28,9 @@ button.addEventListener("click",()=>{
 })
 
 function addToLibrary(){
- 
+   const div2 = document.createElement("div");
+   
+  
   
 
     
@@ -40,11 +42,12 @@ form.addEventListener("submit",(e)=>{
   title  = document.getElementById("title").value
   pages = document.getElementById("pages").value
   read = document.getElementById("read").value
-  alert(author)
-  alert(title)
-  alert(pages)
-  alert(read) 
+  const bookArray2 = [author,title,pages,read]
+  console.log(bookArray2)
   form.style.visibility = "hidden";
+  author = "";
+
+  
 
  }); 
 
