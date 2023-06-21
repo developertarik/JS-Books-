@@ -28,6 +28,10 @@ button.addEventListener("click",()=>{
 })
 
 function addToLibrary(){
+  author = document.getElementById("author").value
+  title  = document.getElementById("title").value
+  pages = document.getElementById("pages").value
+  read = document.getElementById("read").value
   const div2 = document.createElement("div");
   for (let i = 0; i < bookArray.length; i++) {
     const element = bookArray[i];
@@ -41,21 +45,16 @@ function addToLibrary(){
 const form  = document.getElementById("form")
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
-  author = document.getElementById("author").value
-  title  = document.getElementById("title").value
-  pages = document.getElementById("pages").value
-  read = document.getElementById("read").value
+ 
   const bookArray2 = [author,title,pages,read]
   bookArray = bookArray2
   console.log(bookArray)
   form.style.visibility = "hidden";
-   
-  author.value = "";
-  title.value = "";
-  pages.value = " ";
-  read.value = "";
-
   addToLibrary();
+  author = document.getElementById("author").value = "";
+  title  = document.getElementById("title").value = " ";
+  pages = document.getElementById("pages").value = " ";
+  read = document.getElementById("read").value= " ";
 
  }); 
 
