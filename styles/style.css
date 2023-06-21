@@ -22,3 +22,14 @@ td{
   background: gray;
   color:white;
   }
+
+/*JAVASCRİPT*/
+#divj{
+  display:flex;
+  flex-direction:row;
+  width:200px;
+  height: 100px;
+  color:black;
+  text-align: center;
+  background-color:antiquewhite;
+}

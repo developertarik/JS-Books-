@@ -35,6 +35,7 @@ function addToLibrary(){
    
   }   
   div2.innerHTML += [author,title,pages,read]
+  div2.setAttribute("id","divj")
   div.appendChild(div2)
 }
 const form  = document.getElementById("form")
