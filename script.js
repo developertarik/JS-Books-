@@ -37,7 +37,14 @@ function addToLibrary(){
     const element = bookArray[i];
     console.log(element)
    
-  }   
+  }
+  const deleteButton = document.createElement("button");
+  deleteButton.addEventListener("click",()=>{
+    
+  div2.remove();
+  deleteButton.remove();
+  })
+  div.appendChild(deleteButton)
   div2.innerHTML += [author,title,pages,read]
   div2.setAttribute("id","divj")
   div.appendChild(div2)
