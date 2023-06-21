@@ -12,7 +12,7 @@ let bookArray =["hobbit 399 read","silmarillion 299 read","create 0 0 read"];
 //buttons
 const button = document.getElementById("button")
 const submit = document.getElementById("submit")
-const table = document.getElementById("table")
+const div = document.getElementById("table")
 // // function viewToLibrary(){
 // //   for (let i = 0; i< bookArray.length; i++) {
 // //     let td = document.createElement("td");
@@ -28,12 +28,14 @@ button.addEventListener("click",()=>{
 })
 
 function addToLibrary(){
-   const div2 = document.createElement("div");
+  const div2 = document.createElement("div");
+  for (let i = 0; i < bookArray.length; i++) {
+    const element = bookArray[i];
+    console.log(element)
    
-  
-  
-
-    
+  }   
+  div2.innerHTML += [author,title,pages,read]
+  div.appendChild(div2)
 }
 const form  = document.getElementById("form")
 form.addEventListener("submit",(e)=>{
@@ -43,11 +45,16 @@ form.addEventListener("submit",(e)=>{
   pages = document.getElementById("pages").value
   read = document.getElementById("read").value
   const bookArray2 = [author,title,pages,read]
-  console.log(bookArray2)
+  bookArray = bookArray2
+  console.log(bookArray)
   form.style.visibility = "hidden";
-  author = "";
+   
+  author.value = "";
+  title.value = "";
+  pages.value = " ";
+  read.value = "";
 
-  
+  addToLibrary();
 
  }); 
 
