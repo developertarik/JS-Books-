@@ -40,7 +40,7 @@ function addToLibrary(){
   }
   const deleteButton = document.createElement("button");
   deleteButton.addEventListener("click",()=>{
-    
+  deleteButton.innerText = "Button is delete"
   div2.remove();
   deleteButton.remove();
   })
