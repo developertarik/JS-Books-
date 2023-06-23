@@ -12,7 +12,7 @@ let bookArray =["hobbit 399 read","silmarillion 299 read","create 0 0 read"];
 //buttons
 const button = document.getElementById("button")
 const submit = document.getElementById("submit")
-const div = document.getElementById("table")
+const div = document.getElementById("container")
 // // function viewToLibrary(){
 // //   for (let i = 0; i< bookArray.length; i++) {
 // //     let td = document.createElement("td");
@@ -44,9 +44,12 @@ function addToLibrary(){
   div2.remove();
   deleteButton.remove();
   })
-  div.appendChild(deleteButton)
   div2.innerHTML += [author,title,pages,read]
-  div2.setAttribute("id","divj")
+  deleteButton.setAttribute('style', 'width: 50px; height: 25px;');
+  
+  div2.setAttribute("id","box")
+  div2.appendChild(deleteButton)
+
   div.appendChild(div2)
 }
 const form  = document.getElementById("form")
