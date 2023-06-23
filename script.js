@@ -39,22 +39,26 @@ function addToLibrary(){
    
   }
   const deleteButton = document.createElement("button");
+  const readButton= document.createElement("button");
   deleteButton.addEventListener("click",()=>{
-  deleteButton.innerText = "Button is delete"
+  deleteButton.innerText = "Button is delete";
   div2.remove();
   deleteButton.remove();
   })
+  
   div2.innerHTML += [author,title,pages,read]
-  var text = document.createTextNode("Delete");
-  deleteButton.appendChild(text);
+  let text = document.createTextNode("Delete");
+   deleteButton.appendChild(text);
+   div2.appendChild(readButton)
   deleteButton.setAttribute('style', 'width: 50px; height: 25px;');
   
   div2.setAttribute("id","box")
   div2.appendChild(deleteButton)
+  
 
   div.appendChild(div2)
 }
-const form  = document.getElementById("form")
+ const form  = document.getElementById("form")
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
  
@@ -67,6 +71,7 @@ form.addEventListener("submit",(e)=>{
   title  = document.getElementById("title").value = " ";
   pages = document.getElementById("pages").value = " ";
   read = document.getElementById("read").value= " ";
+
 
  }); 
 
