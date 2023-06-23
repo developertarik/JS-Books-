@@ -45,6 +45,8 @@ function addToLibrary(){
   deleteButton.remove();
   })
   div2.innerHTML += [author,title,pages,read]
+  var text = document.createTextNode("Delete");
+  deleteButton.appendChild(text);
   deleteButton.setAttribute('style', 'width: 50px; height: 25px;');
   
   div2.setAttribute("id","box")
