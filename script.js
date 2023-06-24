@@ -13,13 +13,7 @@ let bookArray =["hobbit 399 read","silmarillion 299 read","create 0 0 read"];
 const button = document.getElementById("button")
 const submit = document.getElementById("submit")
 const div = document.getElementById("container")
-// // function viewToLibrary(){
-// //   for (let i = 0; i< bookArray.length; i++) {
-// //     let td = document.createElement("td");
-// //     td.innerText = bookArray[i];
-// //     table.appendChild(td)
-// // }
-
+ const checkbox = document.getElementById("checkbox")
 
 // }
 //add to library
@@ -31,13 +25,9 @@ function addToLibrary(){
   author = document.getElementById("author").value
   title  = document.getElementById("title").value
   pages = document.getElementById("pages").value
-  read = document.getElementById("read").value
   const div2 = document.createElement("div");
-  for (let i = 0; i < bookArray.length; i++) {
-    const element = bookArray[i];
-    console.log(element)
-   
-  }
+
+  
   const deleteButton = document.createElement("button");
   const readButton= document.createElement("button");
   deleteButton.addEventListener("click",()=>{
@@ -45,8 +35,13 @@ function addToLibrary(){
   div2.remove();
   deleteButton.remove();
   })
-  
-  div2.innerHTML += [author,title,pages,read]
+  if(checkbox.checked){
+    div2.innerHTML +="read";
+}
+else{
+  div2.innerHTML +="not read!";
+}
+  div2.innerHTML += [author,title,pages]
   let text = document.createTextNode("Delete");
    deleteButton.appendChild(text);
    div2.appendChild(readButton)
@@ -62,7 +57,7 @@ function addToLibrary(){
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
  
-  const bookArray2 = [author,title,pages,read]
+  const bookArray2 = [author,title,pages]
   bookArray = bookArray2
   console.log(bookArray)
   form.style.visibility = "hidden";
@@ -70,13 +65,9 @@ form.addEventListener("submit",(e)=>{
   author = document.getElementById("author").value = "";
   title  = document.getElementById("title").value = " ";
   pages = document.getElementById("pages").value = " ";
-  read = document.getElementById("read").value= " ";
 
 
  }); 
 
-  
-
-  
   
   
