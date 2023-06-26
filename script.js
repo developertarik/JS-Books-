@@ -34,13 +34,19 @@ const readTxt = document.createTextNode("read")
   const read = document.getElementById("read").value;
   let readNode = document.createElement("h6");
   readNode.innerHTML = `Read? ${read === "on" ? "read" : "noread"}`;
-  readBtn.addEventListener("click",()=>{
-    if(read==="on"){
-    readNode.innerHTML ="no read";}
-    else{
-      readNode.innerHTML ="read";
-    }
-})
+  
+      if (read.value == "on") {
+        readBtn.value = "no read";
+        readBtn.addEventListener("click",()=>{
+          readNode.innerHTML ="read";
+        })
+      }
+      else if(read.value !="on"){
+        readBtn.addEventListener("click",()=>{
+          readNode.innerHTML ="no read"
+        })
+      }
+;
   div2.innerHTML += newBook2.author + newBook2.title + newBook2.pages;
   div2.appendChild(readNode)
  deleteButton.setAttribute('style', 'width: 50px; height: 25px;');
