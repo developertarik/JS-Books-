@@ -41,7 +41,7 @@ readBtn.addEventListener("click",()=>{
     readNode.innerHTML ="read";
     read="on"
   }})
-div2.innerHTML += newBook2.author + newBook2.title + newBook2.pages;
+div2.innerHTML += "<p class='b'>" + newBook2.author +"</p>" + "<p class='b'>" + newBook2.title +"</p>" + "Pages:"+ newBook2.pages;
 div2.appendChild(readNode)
 deleteButton.setAttribute('style', 'width: 50px; height: 25px;');
 deleteButton.addEventListener("click",()=>{

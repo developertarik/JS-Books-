@@ -30,11 +30,12 @@
  #box{
   min-width: 200px;
   max-width: 300px;
-  height: 150px;
+  height: 200px;
   display:flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
   background-color: white;
   color:black;
   border: 3px solid black;
@@ -99,4 +100,7 @@ input{
   width: 150px;
   height: 50px;
   font-size: large;
+}
+.b{
+  text-align: center;
 }
