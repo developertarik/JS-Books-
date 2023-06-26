@@ -12,7 +12,6 @@ let newBook2;
 const button = document.getElementById("button")
 const submit = document.getElementById("submit")
 const div = document.getElementById("container")
- 
 
 console.log(newBook)
 
@@ -27,12 +26,21 @@ button.addEventListener("click",()=>{
 //delete
 
 function addToLibrary( ){
+  const readBtn=document.createElement("button");
+const readTxt = document.createTextNode("read")
   const div2 = document.createElement("div")
   const deleteButton = document.createElement("button");
  
   const read = document.getElementById("read").value;
-  let readNode = document.createElement("h3");
-  readNode.innerHTML = `Read? ${read}${read === "Yes" ? "😃" : "😢"}`;
+  let readNode = document.createElement("h6");
+  readNode.innerHTML = `Read? ${read === "on" ? "read" : "noread"}`;
+  readBtn.addEventListener("click",()=>{
+    if(read==="on"){
+    readNode.innerHTML ="no read";}
+    else{
+      readNode.innerHTML ="read";
+    }
+})
   div2.innerHTML += newBook2.author + newBook2.title + newBook2.pages;
   div2.appendChild(readNode)
  deleteButton.setAttribute('style', 'width: 50px; height: 25px;');
@@ -42,7 +50,9 @@ function addToLibrary( ){
 })
 let text = document.createTextNode("Delete");
    deleteButton.appendChild(text);
+   readBtn.appendChild(readTxt)
    div2.setAttribute("id","box")
+   div2.appendChild(readBtn)
   div2.appendChild(deleteButton)
   
 
