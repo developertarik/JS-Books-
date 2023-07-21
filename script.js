@@ -1,10 +1,12 @@
 // let bookArray = [Book]
-function Book(author,title,pages,read){
+class Book{
+  
+  constructor(author,title,pages,read){
   this.author = author
   this.title = title
   this.pages = pages
   this.read = read
- 
+  }
 }
 const newBook= undefined;
 let newBook2;
@@ -25,7 +27,7 @@ form.style.visibility = "visible";
 })
 //delete
 
-function addToLibrary( ){
+function addToLibrary (){
 const readBtn=document.createElement("button");
 const readTxt = document.createTextNode("read")
 const div2 = document.createElement("div")
